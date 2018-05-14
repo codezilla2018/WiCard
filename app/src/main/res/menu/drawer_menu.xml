@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item android:id="@+id/home"
+        android:title="Home"
+        android:icon="@drawable/home"></item>
+    <item android:id="@+id/create_wicard"
+        android:title="Create a WiCard"
+        android:icon="@drawable/create"></item>
+    <item android:id="@+id/my_wicard"
+    android:title="My WiCard"
+        android:icon="@drawable/my"></item>
+    <item android:id="@+id/send_wicard"
+        android:title="Send My WiCard"
+        android:icon="@drawable/send"></item>
+    <item android:id="@+id/get_wicard"
+        android:title="Get WiCard"
+        android:icon="@drawable/get"></item>
+    <item android:id="@+id/saved_wicards"
+        android:title="Saved WiCards"
+        android:icon="@drawable/saved"></item>
+    <item android:id="@+id/profile"
+        android:title="Profile"
+        android:icon="@drawable/profile"></item>
+    <item android:id="@+id/logout"
+        android:title="Logout"
+        android:icon="@drawable/logout"></item>
+
+</menu>

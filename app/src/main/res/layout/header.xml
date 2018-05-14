@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:background="@drawable/hero_bg">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WiCard"
+        android:textSize="35sp"
+        android:paddingLeft="15dp"
+        android:textColor="@color/white"
+        android:paddingTop="25dp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Share your Attitude"
+        android:paddingLeft="20dp"
+        android:textColor="@color/colorAccent"
+        android:textStyle="bold"/>
+
+
+
+
+
+</LinearLayout>
