@@ -65,13 +65,6 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(this, "Save WiCards", Toast.LENGTH_SHORT).show();
                 break;
 
-            case R.id.profile:
-                Toast.makeText(this, "Profile", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.logout:
-                Toast.makeText(this, "Logout", Toast.LENGTH_SHORT).show();
-                break;
 
         }
     }
