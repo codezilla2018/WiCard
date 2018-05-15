@@ -1,7 +1,9 @@
 package me.morasquad.wicard;
 
 import android.content.Intent;
+import android.os.Build;
 import android.support.annotation.NonNull;
+import android.support.annotation.RequiresApi;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -51,6 +53,7 @@ public class CreateWiCardActivity extends AppCompatActivity {
         });
 
         SaveData.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
                 String fullName = FullName.getText().toString();
@@ -67,6 +70,10 @@ public class CreateWiCardActivity extends AppCompatActivity {
                     boolean result = sqliteHelper.saveWiCard(emailAddress, address, mobileNumber, fullName);
 
                     if(result){
+                        FullName.setText("");
+                        Address.setText("");
+                        MobileNumber.setText("");
+                        EmailAddress.setText("");
                         Toast.makeText(CreateWiCardActivity.this, "Your WiCard is Successfully Created!", Toast.LENGTH_SHORT).show();
                     }else {
                         Toast.makeText(CreateWiCardActivity.this, "Failed Creating WiCard!", Toast.LENGTH_SHORT).show();
