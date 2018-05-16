@@ -2,11 +2,7 @@ package me.morasquad.wicard;
 
 import android.content.Intent;
 import android.os.Build;
-import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
-import android.support.design.widget.NavigationView;
-import android.support.v4.widget.DrawerLayout;
-import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -18,9 +14,7 @@ import android.widget.Toast;
 
 public class CreateWiCardActivity extends AppCompatActivity {
 
-    private DrawerLayout mDrawerLayout;
-    private ActionBarDrawerToggle mToggle;
-    private NavigationView navigationView;
+
     private EditText FullName, Address, MobileNumber, EmailAddress;
     private Button SaveData;
     private SqliteHelper sqliteHelper;
@@ -29,12 +23,8 @@ public class CreateWiCardActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_wi_card);
 
-        navigationView = (NavigationView) findViewById(R.id.nav_view);
-        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer);
-        mToggle = new ActionBarDrawerToggle(this, mDrawerLayout, R.string.open, R.string.close);
-        mDrawerLayout.addDrawerListener(mToggle);
-        mToggle.syncState();
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setTitle("WiCard : Create New WiCard");
 
         sqliteHelper = new SqliteHelper(this);
@@ -44,13 +34,6 @@ public class CreateWiCardActivity extends AppCompatActivity {
         EmailAddress = (EditText) findViewById(R.id.email);
         SaveData = (Button) findViewById(R.id.save_data);
 
-        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
-            @Override
-            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-                UserMenuSelector(item);
-                return false;
-            }
-        });
 
         SaveData.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
@@ -88,46 +71,21 @@ public class CreateWiCardActivity extends AppCompatActivity {
 
     }
 
-    private void UserMenuSelector(MenuItem item) {
-
-        switch (item.getItemId()){
-
-            case R.id.home:
-                Intent home = new Intent(CreateWiCardActivity.this, MainActivity.class);
-                home.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
-                startActivity(home);
-                break;
-
-            case R.id.create_wicard:
-                break;
-
-            case R.id.my_wicard:
-                Toast.makeText(this, "My WiCard", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.send_wicard:
-                Toast.makeText(this, "Send WiCard", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.get_wicard:
-                Toast.makeText(this, "Get WiCard", Toast.LENGTH_SHORT).show();
-                break;
-
-            case R.id.saved_wicards:
-                Toast.makeText(this, "Save WiCards", Toast.LENGTH_SHORT).show();
-                break;
-
-
-        }
-    }
-
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        if(mToggle.onOptionsItemSelected(item)){
-            return true;
+        int id  = item.getItemId();
+
+        if(id == android.R.id.home){
+            SendUsertoMainActivity();
         }
         return super.onOptionsItemSelected(item);
+    }
 
+    private void SendUsertoMainActivity() {
 
+        Intent home = new Intent(CreateWiCardActivity.this, MainActivity.class);
+        home.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(home);
+        finish();
     }
 }
