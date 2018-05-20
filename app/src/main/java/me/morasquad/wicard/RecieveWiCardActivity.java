@@ -9,16 +9,23 @@ import android.net.wifi.p2p.WifiP2pDevice;
 import android.net.wifi.p2p.WifiP2pDeviceList;
 import android.net.wifi.p2p.WifiP2pInfo;
 import android.net.wifi.p2p.WifiP2pManager;
+import android.os.Handler;
+import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
+import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
 import java.net.InetAddress;
+import java.net.InetSocketAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -29,6 +36,7 @@ public class RecieveWiCardActivity extends AppCompatActivity {
     TextView emailText;
     TextView addressText;
     TextView mobileNumText;
+    Button saveWiCard, deleteWiCard;
     SqliteHelper sqliteHelper;
     String fullName, email, mobileNumber, address;
 
@@ -44,6 +52,13 @@ public class RecieveWiCardActivity extends AppCompatActivity {
     WifiP2pDevice[] deviceArray;
 
     static  final int MESSAGE_READ = 1;
+
+    ServerClass serverClass;
+    ClientClass clientClass;
+    SendRecieve sendRecieve;
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -58,13 +73,52 @@ public class RecieveWiCardActivity extends AppCompatActivity {
         addressText = (TextView) findViewById(R.id.addressTxtRec);
         mobileNumText = (TextView) findViewById(R.id.mobileNumTxtRec);
         connectionStatus = (TextView) findViewById(R.id.connectonStatusRec);
+        saveWiCard = (Button) findViewById(R.id.save_wicard);
+        deleteWiCard = (Button) findViewById(R.id.delete_wicard);
 
+        saveWiCard.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                boolean result = sqliteHelper.saveRecievedWiCard(email, address, mobileNumber, fullName);
+
+                if(result){;
+                    Toast.makeText(RecieveWiCardActivity.this, "Saved Successfully!", Toast.LENGTH_SHORT).show();
+                }else {
+                    Toast.makeText(RecieveWiCardActivity.this, "Failed to Saving!", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
 
         initialLoading();
         initialListner();
         discoverPeers();
-    }
 
+
+
+
+    }
+    Handler handler = new Handler(new Handler.Callback() {
+        @Override
+        public boolean handleMessage(Message msg) {
+            switch (msg.what){
+                case MESSAGE_READ:
+                    byte[] readBuff = (byte[]) msg.obj;
+                    String tempMsg = new String(readBuff, 0,msg.arg1);
+                    String[] parts = tempMsg.split("&");
+                    fullName = parts[0];
+                    email = parts[1];
+                    address = parts[2];
+                    mobileNumber = parts[3];
+                    fullNameText.setText(fullName);
+                    emailText.setText(email);
+                    addressText.setText(address);
+                    mobileNumText.setText(mobileNumber);
+                    break;
+            }
+            return true;
+        }
+    });
 
     private void discoverPeers() {
 
@@ -143,8 +197,12 @@ public class RecieveWiCardActivity extends AppCompatActivity {
 
             if(wifiP2pInfo.groupFormed && wifiP2pInfo.isGroupOwner){
                 connectionStatus.setText("Sender");
+                serverClass = new ServerClass();
+                serverClass.start();
             }else if (wifiP2pInfo.groupFormed){
                 connectionStatus.setText("Receiver");
+                clientClass = new ClientClass(groupOwnerAddress);
+                clientClass.start();
             }
         }
     };
@@ -178,4 +236,93 @@ public class RecieveWiCardActivity extends AppCompatActivity {
         super.onPause();
         unregisterReceiver(mReciever);
     }
+
+    public class ServerClass extends Thread{
+        Socket socket;
+        ServerSocket serverSocket;
+
+        @Override
+        public void run() {
+            try {
+                serverSocket = new ServerSocket(8888);
+                socket = serverSocket.accept();
+                sendRecieve = new SendRecieve(socket);
+                sendRecieve.start();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    public class ClientClass extends Thread{
+
+        Socket socket;
+        String hostAdd;
+
+        public ClientClass(InetAddress hostAddress){
+
+            hostAdd = hostAddress.getHostAddress();
+            socket = new Socket();
+        }
+
+        @Override
+        public void run() {
+
+            try {
+                socket.connect(new InetSocketAddress(hostAdd, 8888),500);
+
+                sendRecieve = new SendRecieve(socket);
+                sendRecieve.start();
+
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    private class SendRecieve extends Thread{
+
+        private Socket socket;
+        private InputStream inputStream;
+        private OutputStream outputStream;
+
+        public SendRecieve(Socket skt) throws IOException {
+            socket = skt;
+            inputStream = socket.getInputStream();
+            outputStream = socket.getOutputStream();
+
+
+        }
+
+        @Override
+        public void run() {
+
+            byte[] buffer = new byte[1024];
+            int bytes;
+
+            while (socket != null){
+                try {
+                    bytes = inputStream.read(buffer);
+                    if(bytes > 0){
+                        handler.obtainMessage(MESSAGE_READ, bytes, -1,buffer).sendToTarget();
+
+                    }
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+
+        public void write(byte[] bytes){
+            try {
+                outputStream.write(bytes);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
+
 }
