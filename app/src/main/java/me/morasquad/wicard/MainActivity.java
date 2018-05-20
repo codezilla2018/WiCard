@@ -1,6 +1,7 @@
 package me.morasquad.wicard;
 
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
 import android.support.v4.widget.DrawerLayout;
@@ -60,16 +61,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(create);
                 break;
 
-            case R.id.send_wicard:
-                Toast.makeText(this, "Send WiCard", Toast.LENGTH_SHORT).show();
-                break;
-
             case R.id.get_wicard:
-                Toast.makeText(this, "Get WiCard", Toast.LENGTH_SHORT).show();
+                Intent recieve = new Intent(MainActivity.this, RecieveWiCardActivity.class);
+                startActivity(recieve);
                 break;
 
             case R.id.saved_wicards:
-                Toast.makeText(this, "Save WiCards", Toast.LENGTH_SHORT).show();
+                Intent recieved = new Intent(MainActivity.this, RecievedWiCardActivity.class);
+                startActivity(recieved);
                 break;
 
 
