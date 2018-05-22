@@ -37,3 +37,22 @@ Then Click on Delete.
 ![my wicards](http://i67.tinypic.com/se7xu0.jpg)
 
 Then Click Yes. And It will be deleted your WiCard.
+
+### Sending Your WiCard
+
+To Sending the WiCard. The Receiver also need to install WiCard App in his Mobile Phone.
+In the senders phone he can click and hold on the WiCard that he needs to send and select Send option.
+It will go to Sending Wizard.
+
+![my wicards](http://i65.tinypic.com/nye2rl.jpg)
+
+It will automatically search for nearby devices. If not click the Search Devices Button. If the device show on the List Click on the device and It will be connected. 
+
+![my wicards](http://i64.tinypic.com/11bk8ip.jpg)
+
+Then Wait until the status Changed to the __Receiver__.
+
+![my wicards](http://i68.tinypic.com/14c8d3b.jpg)
+
+Now Click the send Button.
+
