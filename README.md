@@ -56,3 +56,16 @@ Then Wait until the status Changed to the __Receiver__.
 
 Now Click the send Button.
 
+### Receiving WiCards.
+
+If you need to receive a WiCard from another person. Simply Click on __Receive WiCard__ Button on Home Screen or Drawer.
+Then you will be redirect to the Receiving Wizard.
+
+![my wicards](http://i66.tinypic.com/6fz7sz.jpg)
+
+Then Wait for the other device discover you. Then Connected other Device will send the WiCard and it shows on your mobile.
+
+![my wicards](http://i64.tinypic.com/2w4mgkx.jpg)
+
+Then You Can Save or Delete it clicking on the action buttons.
+
