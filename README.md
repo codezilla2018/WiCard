@@ -29,6 +29,7 @@ If you need to see or send or delete your WiCard. You Can easily click on the dr
 ![my wicards](http://i64.tinypic.com/ux3zk.jpg)
 
 If you need to delete on this. You can tap and hold on the WiCard and popup menu will appear.
+
 ![my wicards](http://i64.tinypic.com/p3ybq.jpg)
 
 Then Click on Delete. 
