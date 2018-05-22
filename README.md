@@ -21,3 +21,18 @@ You can simply click the __Create a WiCard__ button on main page or, __Create a 
 Then You can enter your WiCard Details and Click __Save__ Button. It will be create Your WiCard.
 
 ![main page](http://i65.tinypic.com/282448o.jpg)
+
+### Viewing Created WiCards
+
+If you need to see or send or delete your WiCard. You Can easily click on the drawer and select __My WiCard__. Then You can see your created WiCards.
+
+![my wicards](http://i64.tinypic.com/ux3zk.jpg)
+
+If you need to delete on this. You can tap and hold on the WiCard and popup menu will appear.
+![my wicards](http://i64.tinypic.com/p3ybq.jpg)
+
+Then Click on Delete. 
+
+![my wicards](http://i67.tinypic.com/se7xu0.jpg)
+
+Then Click Yes. And It will be deleted your WiCard.
