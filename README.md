@@ -58,7 +58,7 @@ Now Click the send Button.
 
 ### Receiving WiCards.
 
-If you need to receive a WiCard from another person. Simply Click on __Receive WiCard__ Button on Home Screen or Drawer.
+If you need to receive a WiCard from another person. Simply Click on __Receive WiCard__ Button on Home Screen or __Get a WiCard__ option on Drawer.
 Then you will be redirect to the Receiving Wizard.
 
 ![my wicards](http://i66.tinypic.com/6fz7sz.jpg)
