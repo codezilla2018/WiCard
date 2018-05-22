@@ -69,3 +69,12 @@ Then Wait for the other device discover you. Then Connected other Device will se
 
 Then You Can Save or Delete it clicking on the action buttons.
 
+### Viewing Received WiCards
+
+Clicking on the __Saved WiCards__ on the Drawer or Home Page. You can access the your received and saved WiCards. 
+
+![my wicards](http://i63.tinypic.com/23rpf6u.jpg)
+
+Then Click and holding on the WiCards you can get calls to the Numbers, Send Messages to the Number, Send Emails to the Email address, Save the WiCard as Mobile Contact and Delete the received WiCard.
+
+![my wicards](http://i67.tinypic.com/vhutd.jpg)
