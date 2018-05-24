@@ -4,17 +4,23 @@ sandun.isuru@gmail.com | Sandun Isuru Niraj | IA7
 ![launcher icon](http://i65.tinypic.com/25flje0.jpg)
 # WiCard - Share Your Attitude
 
-[link](#introduction)
-
-## Introduction
+1. [Introduction](#introduction)
+2. [How it Works](#how-it-works)
+    2.1 [Creating a new WiCard](#creating-a-new-wicard)
+    2.2 [Viewing Created WiCards](#viewing-created-wicards)
+    2.3 [Sending Your WiCard](#sending-your-wicard)
+    2.4 [Receiving WiCards](#receiving-wicards)
+    2.5 [Viewing Received WiCards](#viewing-received-wicards)
+3. 
+## 1. Introduction
 With this application You can __Easily__ create your Virtual Name Card and Share them with your Business persons and others through the __WiFi__. 
 - It can save your WiCard, Without Internet Connection and Share them Without Internet. 
 - And Also Easily connect them with On Phone, SMS or Email.
 - You can save them in to your contacts not remembering them. No need to re enter like traditional Business Cards.
 
-## How it Works
+## 2. How it Works
 
-### Creating a new WiCard
+### 2.1 Creating a new WiCard
 
 You can simply click the __Create a WiCard__ button on main page or, __Create a WiCard__ on Drawer to enter the New WiCard Creation Wizard. 
 
@@ -25,7 +31,7 @@ Then You can enter your WiCard Details and Click __Save__ Button. It will be cre
 
 ![main page](http://i65.tinypic.com/282448o.jpg)
 
-### Viewing Created WiCards
+### 2.2 Viewing Created WiCards
 
 If you need to see or send or delete your WiCard. You Can easily click on the drawer and select __My WiCard__. Then You can see your created WiCards.
 
@@ -41,7 +47,7 @@ Then Click on Delete.
 
 Then Click Yes. And It will be deleted your WiCard.
 
-### Sending Your WiCard
+### 2.3 Sending Your WiCard
 
 To Sending the WiCard. The Receiver also need to install WiCard App in his Mobile Phone.
 In the senders phone he can click and hold on the WiCard that he needs to send and select Send option.
@@ -59,7 +65,7 @@ Then Wait until the status Changed to the __Receiver__.
 
 Now Click the send Button.
 
-### Receiving WiCards.
+### 2.4 Receiving WiCards.
 
 If you need to receive a WiCard from another person. Simply Click on __Receive WiCard__ Button on Home Screen or __Get a WiCard__ option on Drawer.
 Then you will be redirect to the Receiving Wizard.
@@ -72,7 +78,7 @@ Then Wait for the other device discover you. Then Connected other Device will se
 
 Then You Can Save or Delete it clicking on the action buttons.
 
-### Viewing Received WiCards
+### 2.5 Viewing Received WiCards
 
 Clicking on the __Saved WiCards__ on the Drawer or Home Page. You can access the your received and saved WiCards. 
 
@@ -82,7 +88,7 @@ Then Click and holding on the WiCards you can get calls to the Numbers, Send Mes
 
 ![my wicards](http://i67.tinypic.com/vhutd.jpg)
 
-## Error Handling
+## 3. Error Handling
 
 + __If Recievers mode Device is still disconnected__ -  
     Please simply click on the back button of your mobile and again click on the Get WiCard Option.
@@ -90,20 +96,20 @@ Then Click and holding on the WiCards you can get calls to the Numbers, Send Mes
 + __If Automatically Not Turn on WiFi__ - 
     Check Your permissions on Mobile Phone. Below the Android API 17 devices has some issues with WIFI connectivity.
     
-## Tested Profile
+## 4. Tested Profile
 
   + Android API Level 16 / 17
   + 1GB Ram and 512MB Ram
   
-## Used Libraries
+## 5. Used Libraries
 
 All are the Google Standard Libraries Only no Third party libraries used.
 
-## Used Services
+## 6. Used Services
 
 All the services are Free and Open Source
 
-## References
+## 7. References
 
 + Official Android Doumentation
 + P Joby, Abby. (2016). Socket Programming WIFI Chat APP For Android Smartphone. 10.13140/RG.2.1.3692.2483.
