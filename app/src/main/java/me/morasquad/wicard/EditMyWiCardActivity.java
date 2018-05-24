@@ -4,9 +4,12 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 public class EditMyWiCardActivity extends AppCompatActivity {
 
@@ -34,6 +37,35 @@ public class EditMyWiCardActivity extends AppCompatActivity {
         intentEmail = intent.getStringExtra("email");
 
         loadWiCard();
+
+        upadateBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String full_Name = fullName.getText().toString();
+                String emailAdrress = email.getText().toString();
+                String mobileNumber = mobileNo.getText().toString();
+                String Address = address.getText().toString();
+
+                if(TextUtils.isEmpty(full_Name)){
+                    Toast.makeText(EditMyWiCardActivity.this, "You Need to Enter Full Name", Toast.LENGTH_SHORT).show();
+                }else if(TextUtils.isEmpty(emailAdrress)){
+                    Toast.makeText(EditMyWiCardActivity.this, "You Need to Enter Email Address", Toast.LENGTH_SHORT).show();
+                }else {
+
+                    boolean result = sqliteHelper.saveWiCard(emailAdrress, Address, mobileNumber, full_Name);
+
+                    if(result){
+                        Intent back = new Intent(EditMyWiCardActivity.this, ViewMyWiCardActivity.class);
+                        back.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                        startActivity(back);
+                        Toast.makeText(getApplicationContext(), "Your WiCard is Successfully Created!", Toast.LENGTH_SHORT).show();
+                    }else {
+                        Toast.makeText(getApplicationContext(), "Failed Creating WiCard!", Toast.LENGTH_SHORT).show();
+
+                    }
+                }
+            }
+        });
 
 
     }
