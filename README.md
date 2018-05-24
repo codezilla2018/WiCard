@@ -79,7 +79,7 @@ Then Click and holding on the WiCards you can get calls to the Numbers, Send Mes
 
 ![my wicards](http://i67.tinypic.com/vhutd.jpg)
 
-### Error Handling
+## Error Handling
 
 + __If Recievers mode Device is still disconnected__ -  
     Please simply click on the back button of your mobile and again click on the Get WiCard Option.
@@ -87,20 +87,20 @@ Then Click and holding on the WiCards you can get calls to the Numbers, Send Mes
 + __If Automatically Not Turn on WiFi__ - 
     Check Your permissions on Mobile Phone. Below the Android API 17 devices has some issues with WIFI connectivity.
     
-### Tested Profile
+## Tested Profile
 
   + Android API Level 16 / 17
   + 1GB Ram and 512MB Ram
   
-### Used Libraries
+## Used Libraries
 
 All are the Google Standard Libraries Only no Third party libraries used.
 
-### Used Services
+## Used Services
 
 All the services are Free and Open Source
 
-### References
+## References
 
 + Official Android Doumentation
 + P Joby, Abby. (2016). Socket Programming WIFI Chat APP For Android Smartphone. 10.13140/RG.2.1.3692.2483.
