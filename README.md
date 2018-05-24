@@ -5,6 +5,7 @@ sandun.isuru@gmail.com | Sandun Isuru Niraj | IA7
 # WiCard - Share Your Attitude
 
 [1. Introduction](#1-introduction)
+
 [2. How it Works](#2-how-it-works)
 
    [2.1 Creating a new WiCard](#21-creating-a-new-wicard)
