@@ -4,28 +4,30 @@ sandun.isuru@gmail.com | Sandun Isuru Niraj | IA7
 ![launcher icon](http://i65.tinypic.com/25flje0.jpg)
 # WiCard - Share Your Attitude
 
-1. [Introduction](#1-introduction)
-2. [How it Works](#2-how-it-works)
+[1. Introduction](#1-introduction)
+[2. How it Works](#2-how-it-works)
 
-    2.1 [Creating a new WiCard](#21-creating-a-new-wicard)
+   [2.1 Creating a new WiCard](#21-creating-a-new-wicard)
     
-    2.2 [Viewing Created WiCards](#22-viewing-created-wicards)
+   [2.2 Viewing Created WiCards](#22-viewing-created-wicards)
     
-    2.3 [Sending Your WiCard](#23-sending-your-wicard)
+   [2.3 Sending Your WiCard](#23-sending-your-wicard)
     
-    2.4 [Receiving WiCards](#24-receiving-wicards)
+   [2.4 Receiving WiCards](#24-receiving-wicards)
     
-    2.5 [Viewing Received WiCards](#25-viewing-received-wicards)
+   [2.5 Viewing Received WiCards](#25-viewing-received-wicards)
     
-3. [Error Handling](#3-error-handling)
+[3. Error Handling](#3-error-handling)
 
-4. [Tested Profile](#4-tested-profile)
+[4. Tested Profile](#4-tested-profile)
 
-5. [Used Libraries](#5-used-libraries)
+[5. Used Libraries](#5-used-libraries)
 
-6. [Used Services](#6-used-services)
+[6. Used Services](#6-used-services)
 
-7. [References](#7-references) 
+[7. Future Developments](#7-future-developments)
+
+[8. References](#8-references) 
 
 
 ## 1. Introduction
@@ -131,7 +133,7 @@ All the services are Free and Open Source
 + Share WiCard through the Internet.
 + Share WiCards to the Social Media.
 
-## 7. References
+## 8. References
 
 + Official Android Doumentation
 + P Joby, Abby. (2016). Socket Programming WIFI Chat APP For Android Smartphone. 10.13140/RG.2.1.3692.2483.
