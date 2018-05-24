@@ -78,3 +78,29 @@ Clicking on the __Saved WiCards__ on the Drawer or Home Page. You can access the
 Then Click and holding on the WiCards you can get calls to the Numbers, Send Messages to the Number, Send Emails to the Email address, Save the WiCard as Mobile Contact and Delete the received WiCard.
 
 ![my wicards](http://i67.tinypic.com/vhutd.jpg)
+
+### Error Handling
+
++ __If Recievers mode Device is still disconnected__ -  
+    Please simply click on the back button of your mobile and again click on the Get WiCard Option.
+    
++ __If Automatically Not Turn on WiFi__ - 
+    Check Your permissions on Mobile Phone. Below the Android API 17 devices has some issues with WIFI connectivity.
+    
+### Tested Profile
+
+  + Android API Level 16 / 17
+  + 1GB Ram and 512MB Ram
+  
+### Used Libraries
+
+All are the Google Standard Libraries Only no Third party libraries used.
+
+### Used Services
+
+All the services are Free and Open Source
+
+### References
+
++ Official Android Doumentation
++ P Joby, Abby. (2016). Socket Programming WIFI Chat APP For Android Smartphone. 10.13140/RG.2.1.3692.2483.
