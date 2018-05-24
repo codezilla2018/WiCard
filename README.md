@@ -4,7 +4,7 @@ sandun.isuru@gmail.com | Sandun Isuru Niraj | IA7
 ![launcher icon](http://i65.tinypic.com/25flje0.jpg)
 # WiCard - Share Your Attitude
 
-        1. [Introduction](https://github.com/codezilla2018/WiCard/blob/master/README.md#introduction)
+[link](#introduction)
 
 ## Introduction
 With this application You can __Easily__ create your Virtual Name Card and Share them with your Business persons and others through the __WiFi__. 
