@@ -125,7 +125,15 @@ All are the Google Standard Libraries Only no Third party libraries used.
 
 All the services are Free and Open Source
 
+## 7. Future Developments
+
++ Develop the Application upto sending Photo ID Profile through the WIFI.
++ Share WiCard through the Internet.
++ Share WiCards to the Social Media.
+
 ## 7. References
 
 + Official Android Doumentation
 + P Joby, Abby. (2016). Socket Programming WIFI Chat APP For Android Smartphone. 10.13140/RG.2.1.3692.2483.
+
+
