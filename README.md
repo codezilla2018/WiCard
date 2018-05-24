@@ -8,15 +8,15 @@ sandun.isuru@gmail.com | Sandun Isuru Niraj | IA7
 
 [2. How it Works](#2-how-it-works)
 
-   [2.1 Creating a new WiCard](#21-creating-a-new-wicard)
+  [2.1 Creating a new WiCard](#21-creating-a-new-wicard)
     
-   [2.2 Viewing Created WiCards](#22-viewing-created-wicards)
+  [2.2 Viewing Created WiCards](#22-viewing-created-wicards)
     
-   [2.3 Sending Your WiCard](#23-sending-your-wicard)
+  [2.3 Sending Your WiCard](#23-sending-your-wicard)
     
-   [2.4 Receiving WiCards](#24-receiving-wicards)
+  [2.4 Receiving WiCards](#24-receiving-wicards)
     
-   [2.5 Viewing Received WiCards](#25-viewing-received-wicards)
+  [2.5 Viewing Received WiCards](#25-viewing-received-wicards)
     
 [3. Error Handling](#3-error-handling)
 
