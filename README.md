@@ -4,14 +4,30 @@ sandun.isuru@gmail.com | Sandun Isuru Niraj | IA7
 ![launcher icon](http://i65.tinypic.com/25flje0.jpg)
 # WiCard - Share Your Attitude
 
-1. [Introduction](#introduction)
-2. [How it Works](#how-it-works)
-    2.1 [Creating a new WiCard](#creating-a-new-wicard)
-    2.2 [Viewing Created WiCards](#viewing-created-wicards)
-    2.3 [Sending Your WiCard](#sending-your-wicard)
-    2.4 [Receiving WiCards](#receiving-wicards)
-    2.5 [Viewing Received WiCards](#viewing-received-wicards)
-3. 
+1. [Introduction](#1-introduction)
+2. [How it Works](#2-how-it-works)
+
+    2.1 [Creating a new WiCard](#21-creating-a-new-wicard)
+    
+    2.2 [Viewing Created WiCards](#22-viewing-created-wicards)
+    
+    2.3 [Sending Your WiCard](#23-sending-your-wicard)
+    
+    2.4 [Receiving WiCards](#24-receiving-wicards)
+    
+    2.5 [Viewing Received WiCards](#25-viewing-received-wicards)
+    
+3. [Error Handling](#3-error-handling)
+
+4. [Tested Profile](#4-tested-profile)
+
+5. [Used Libraries](#5-used-libraries)
+
+6. [Used Services](#6-used-services)
+
+7. [References](#7-references) 
+
+
 ## 1. Introduction
 With this application You can __Easily__ create your Virtual Name Card and Share them with your Business persons and others through the __WiFi__. 
 - It can save your WiCard, Without Internet Connection and Share them Without Internet. 
